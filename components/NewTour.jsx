@@ -1,12 +1,20 @@
 'use client';
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { getExistingTour, generateTourResponse, createNewTour } from '@/utils/actions';
+import {
+  getExistingTour,
+  generateTourResponse,
+  createNewTour,
+  subtractTokens,
+  fetchUserTokensById,
+} from '@/utils/actions';
 import TourInfo from './TourInfo';
 import toast from 'react-hot-toast';
+import { useAuth } from '@clerk/nextjs';
 
 const NewTour = () => {
   const queryClient = useQueryClient();
+  const { userId } = useAuth();
 
   // in data we either get back tour or null
   const {
@@ -20,16 +28,29 @@ const NewTour = () => {
 
       if (existingTour) return existingTour;
 
+      const currentTokens = await fetchUserTokensById(userId);
+
+      if (currentTokens < 300) {
+        toast.error('Not enough tokens to generate a tour');
+        return;
+      }
+
       const newTour = await generateTourResponse(destination);
 
       if (!newTour) {
         toast.error('no matching city found...');
         return null;
       }
-      const response = await createNewTour(newTour);
-      console.log(response);
 
+      const response = await createNewTour(newTour.tour);
       queryClient.invalidateQueries({ queryKey: ['tours'] });
+
+      // TODO subtract tokens
+      const newTokens = await subtractTokens(userId, newTour.tokens);
+      toast.success(`
+       ${newTokens} tokens left
+      `);
+
       return newTour.tour;
     },
   });
@@ -50,7 +71,7 @@ const NewTour = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className='max-w-2xl '>
-        <h2 className='mb-4'>Select your destination</h2>
+        <h2 className='mb-4'>Create Your Dream Trip With AI 🗺️ 🤖 🏝️</h2>
         <div className='join w-full'>
           <input
             type='text'

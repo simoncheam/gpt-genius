@@ -1,6 +1,15 @@
+import { fetchUserTokensById } from '@/utils/actions';
 import { UserProfile } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 
-const ProfilePage = () => {
-  return <UserProfile path='/profile' routing='path' />;
+const ProfilePage = async () => {
+  const { userId } = auth();
+  const currentTokens = await fetchUserTokensById(userId);
+  return (
+    <div>
+      <h2 className='mb-8 ml text-xl front-extrabold'>Token Balance: {currentTokens}</h2>
+      <UserProfile routing='hash' />
+    </div>
+  );
 };
 export default ProfilePage;
