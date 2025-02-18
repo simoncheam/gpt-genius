@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 # GPTGenius 🌍✨
 
 Y'all ready for a travel adventure? 🚗💨 Meet **GPTGenius**, your **AI-powered tour guide**, who just happens to answer all your travel questions in the **charming style of a Southern belle**. Whether you're fixin’ to find the best spots in Paris or just need a little hospitality while planning your trip, this **Next.js 14** application has got you covered!
@@ -85,6 +87,8 @@ Make sure you have:
    git clone https://github.com/YOUR_GITHUB_USERNAME/gptgenius.git
    cd gptgenius
    ```
+
+````
 
 2. Install dependencies:
 
@@ -206,12 +210,5 @@ Simon Cheam - [LinkedIn][linkedin-url]
 [React-url]: https://reactjs.org/
 [TailwindCSS]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white
 [TailwindCSS-url]: https://tailwindcss.com/
-[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white
-[PostgreSQL-url]: https://www.postgresql.org/
-[Clerk]: https://img.shields.io/badge/Clerk-6173F3?style=for-the-badge&logo=clerk&logoColor=white
-[Clerk-url]: https://clerk.dev/
-[OpenAI]: https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white
-[OpenAI-url]: https://openai.com/
-[Unsplash]: https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=unsplash&logoColor=white
-[Unsplash-url]: https://unsplash.com/
 [linkedin-url]: https://www.linkedin.com/in/simoncheam/
+````
