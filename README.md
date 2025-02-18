@@ -88,8 +88,6 @@ Make sure you have:
    cd gptgenius
    ```
 
-````
-
 2. Install dependencies:
 
    ```bash
@@ -211,4 +209,3 @@ Simon Cheam - [LinkedIn][linkedin-url]
 [TailwindCSS]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white
 [TailwindCSS-url]: https://tailwindcss.com/
 [linkedin-url]: https://www.linkedin.com/in/simoncheam/
-````
