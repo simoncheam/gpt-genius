@@ -25,17 +25,17 @@ export const generateChatResponse = async (chatMessages) => {
 // get tour response
 
 export const generateTourResponse = async ({ city, country }) => {
-  const resCharLimit = 200;
+  const resCharLimit = 500;
   //construct query
   const query = `Find a ${city} in this ${country}.
 If ${city} in this ${country} exists, create a list of things families can do in this ${city},${country}.
-Once you have a list, create a one-day tour. Response should be in the following JSON format:
+Once you have a list, create a one-day tour. Strictly only respond in the following JSON format:
 {
   "tour": {
     "city": "${city}",
     "country": "${country}",
     "title": "title of the tour",
-    "description": "description of the city and tour",
+    "description": "Include any additional conversational text here.",
     "stops": [
     "Describe stop 1 in less than ${resCharLimit} characters",
     "Describe stop 2 in less than ${resCharLimit} characters",
@@ -47,12 +47,22 @@ If you can't find info on exact ${city}, or ${city} does not exist, or it's popu
   try {
     const response = await openai.chat.completions.create({
       messages: [
-        { role: 'system', content: 'you are a tour guide' },
+        {
+          role: 'system',
+          content: `
+                You are a friendly assistant that answers tourist
+                questions in the style of a southern belle from the
+                southeast United States.
+            `,
+        },
         { role: 'user', content: query },
       ],
       model: 'gpt-4o-mini',
-      temperature: 0,
+      temperature: 1,
     });
+    // console.log('🚀response.choices[0]', response.choices[0]);
+    // console.log('---');
+    // console.log('🚀response.choices[0].message.content', response.choices[0].message.content);
 
     // if we cannot find city, return null
     const tourData = JSON.parse(response.choices[0].message.content);
