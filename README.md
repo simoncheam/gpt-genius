@@ -86,8 +86,6 @@ Make sure you have:
    cd gptgenius
    ```
 
-````
-
 2. Install dependencies:
 
    ```bash
@@ -217,7 +215,3 @@ Simon Cheam - [LinkedIn][linkedin-url]
 [Unsplash]: https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=unsplash&logoColor=white
 [Unsplash-url]: https://unsplash.com/
 [linkedin-url]: https://www.linkedin.com/in/simoncheam/
-
-```
-
-````
