@@ -8,7 +8,6 @@ const url = `https://api.unsplash.com/search/photos?client_id=${process.env.UNSP
 
 const SingleTourPage = async ({ params }) => {
   const tour = await getSingleTour(params.id);
-  // console.log('🚀 ~ SingleTourPage ~ tour:', tour);
 
   if (!tour) {
     redirect('/tours');
@@ -21,11 +20,12 @@ const SingleTourPage = async ({ params }) => {
   // unsplash API approach to generate image
   const { data } = await axios.get(`${url}${tour.city}`);
   const tourImage = await data?.results[0]?.urls?.raw;
-  console.log('🚀 ~ SingleTourPage ~ tourImage:', tourImage);
 
   return (
     <div>
-      <Link href='/tours' className='btn btn-secondary mb-12'>
+      <Link
+        href='/tours'
+        className='btn btn-secondary mb-12'>
         Back to all tours
       </Link>
       {tourImage ? (

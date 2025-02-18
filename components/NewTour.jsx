@@ -70,8 +70,10 @@ const NewTour = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='max-w-2xl '>
-        <h2 className='mb-4'>Create Your Dream Trip With AI 🗺️ 🤖 🏝️</h2>
+      <form
+        onSubmit={handleSubmit}
+        className='max-w-2xl '>
+        <h2 className='mb-4'>Create Your Dream Trip With Your Southern Belle Travel Planner! 🗺️ 👒 ✨</h2>
         <div className='join w-full'>
           <input
             type='text'
@@ -87,7 +89,9 @@ const NewTour = () => {
             name='country'
             required
           />
-          <button className='btn btn-primary join-item' type='submit'>
+          <button
+            className='btn btn-primary join-item'
+            type='submit'>
             Generate Tour
           </button>
         </div>
