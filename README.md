@@ -12,17 +12,17 @@ Hop on over to the live site: [GPTGenius](https://nextjs-gpt-tour-guide.vercel.a
 
 ## Table of Contents
 
-- [About The Project](#about-the-project)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [About The Project 🏡](#about-the-project-)
+- [Features 🚀](#features-)
+- [Technologies Used 💻](#technologies-used-)
+- [Getting Started 🎯](#getting-started-)
+- [Usage 🏝️](#usage-️)
+- [Project Structure 📂](#project-structure-)
+- [Deployment 🚀](#deployment-)
+- [Contributing 🤝](#contributing-)
+- [License 📜](#license-)
+- [Contact 📬](#contact-)
+- [Acknowledgements 🌟](#acknowledgements-)
 
 ---
 
