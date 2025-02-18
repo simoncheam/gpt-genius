@@ -1,6 +1,3 @@
-Here is your updated `README.md` file with a **touch of humor**, incorporating the **southern belle-style AI assistant** and your **personal links** while maintaining the **[EXAMPLE OUTPUT]** structure.
-
-````markdown
 # GPTGenius 🌍✨
 
 Y'all ready for a travel adventure? 🚗💨 Meet **GPTGenius**, your **AI-powered tour guide**, who just happens to answer all your travel questions in the **charming style of a Southern belle**. Whether you're fixin’ to find the best spots in Paris or just need a little hospitality while planning your trip, this **Next.js 14** application has got you covered!
@@ -88,6 +85,7 @@ Make sure you have:
    git clone https://github.com/YOUR_GITHUB_USERNAME/gptgenius.git
    cd gptgenius
    ```
+
 ````
 
 2. Install dependencies:
@@ -222,4 +220,4 @@ Simon Cheam - [LinkedIn][linkedin-url]
 
 ```
 
-```
+````
